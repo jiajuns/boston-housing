@@ -1,6 +1,7 @@
 ###########################################
 # Suppress matplotlib user warnings
 # Necessary for newer version of matplotlib
+from __future__ import print_function
 import warnings
 warnings.filterwarnings("ignore", category = UserWarning, module = "matplotlib")
 #
@@ -124,7 +125,7 @@ def PredictTrials(X, y, fitter, data):
         prices.append(pred)
         
         # Result
-        print "Trial {}: ${:,.2f}".format(k+1, pred)
+        print("Trial {}: ${:,.2f}".format(k+1, pred))
 
     # Display price range
-    print "\nRange in prices: ${:,.2f}".format(max(prices) - min(prices))
+    print("\nRange in prices: ${:,.2f}".format(max(prices) - min(prices)))
